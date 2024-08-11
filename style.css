@@ -1,0 +1,61 @@
+/* link css file into an html before head tag is end  */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  height: 100vh;
+  overflow: hidden;
+}
+
+span {
+  /* we add icon */
+  /* Go To website icon finder */
+  /* selct icon and copy image address */
+
+  background: url("https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678087-heart-128.png");
+
+  /* we dont see bcz we dont give any width and height */
+  width: 100px;
+  height: 100px;
+  /* again we dont see bcz we dont give any position */
+  position: absolute;
+
+  /* this will not cover in size 
+     we give background size : cover*/
+  background-size: cover;
+
+  /*  now we want this in a center */
+
+  left: 50%;
+  top: 50%;
+  /* After this , they are in center but not in exact center */
+
+  /* for exact center we use this */
+  /*                X     Y */
+  /* transform: translate(-50%,-50%); */
+  transform: translate(-50%, -50%);
+
+  /* add pointer event  go to js file line 25-27 why wwe used pointer events*/
+  pointer-events: none;
+
+  /* now add animation after making in a keyfram */
+  /*  now we add animation */
+  animation: animate linear 6s;
+  /* after this too much heart is massy so we wil show in js set timeout */
+
+}
+
+
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    filter: hue-rotate(0);
+  }
+  100% {
+    transform: translate(-50%, -5000%);
+    opacity: 0;
+    filter: hue-rotate(720deg);
+  }
+}
